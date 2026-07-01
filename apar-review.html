@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NIC Tripura APAR Management - Review &amp; Assess</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f2f4f6",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#974400",
+                        "on-secondary-container": "#fefcff",
+                        "on-surface-variant": "#424751",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-primary-fixed-variant": "#004689",
+                        "inverse-primary": "#a8c8ff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb68d",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-bright": "#f7f9fb",
+                        "error-container": "#ffdad6",
+                        "primary": "#004485",
+                        "on-surface": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#0051d5",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "primary-container": "#0b5cad",
+                        "on-primary-container": "#c0d6ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#321200",
+                        "surface-variant": "#e0e3e5",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed": "#d5e3ff",
+                        "outline": "#727783",
+                        "on-secondary-fixed": "#00174b",
+                        "tertiary": "#723200",
+                        "on-tertiary-container": "#ffcaad",
+                        "on-primary-fixed": "#001b3c",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#316bf3",
+                        "outline-variant": "#c2c6d3",
+                        "surface-tint": "#115eaf",
+                        "primary-fixed-dim": "#a8c8ff",
+                        "tertiary-fixed": "#ffdbc9",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#b4c5ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "display": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Public Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #f7f9fb;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(224, 227, 229, 0.5);
+        }
+    </style>
+</head>
+<body class="flex min-h-screen font-body text-on-surface">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen left-0 w-64 bg-primary sticky top-0 z-50 shadow-xl py-4 gap-2">
+<div class="px-6 py-4 flex flex-col gap-1 border-b border-on-primary-fixed-variant/20 mb-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center mb-2 overflow-hidden">
+<img class="w-10 h-10 object-contain" data-alt="A formal official government logo for NIC Tripura, featuring high-contrast blue and white crest symbols against a pristine white background. The logo reflects institutional authority and digital excellence with clean lines and a modern minimalist aesthetic. Soft studio lighting highlights the sharp edges of the emblem, creating a professional and trustworthy visual presence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_zMl8HhXKqzhXDj2RMTTjqtTmVOWfz9K3X6N8a-O-CuHXiNt7t487SZVkao5RQxqn9bSIc4A3Fslksa6nc3byLUi8XE8A1IyLtw04pPJDrl1A05Jq1yyfs5J-p9mf0x51ukA8JO9zWaZeOY4eGPExxNqlEuJAdzNQTnU97eggeCdWnxM2FkwWo91m25gF-jn9Xk39Z2l-9gW7B1q4LePtesXrDl8D2X8_CUyQdC5vPQ5lydEcNnqMPc-VimMOi_YsDukbgivCmqSl"/>
+</div>
+<h2 class="text-on-primary font-headline font-bold text-lg leading-tight">Government Authority</h2>
+<p class="text-on-primary-container/80 text-xs font-label">Reporting Officer Portal</p>
+</div>
+<nav class="flex flex-col gap-1 px-2">
+<div onclick="window.location.href='authority-dashboard.html'" class="text-primary-fixed-dim hover:bg-on-primary-fixed-variant/50 mx-2 my-1 rounded-lg flex items-center gap-3 px-4 py-3 cursor-pointer transition-all active:scale-95 group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">dashboard</span>
+<span class="text-label-md font-headline">Dashboard</span>
+</div>
+<div class="text-primary-fixed-dim hover:bg-on-primary-fixed-variant/50 mx-2 my-1 rounded-lg flex items-center gap-3 px-4 py-3 cursor-pointer transition-all active:scale-95 group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">description</span>
+<span class="text-label-md font-headline">APAR Submissions</span>
+</div>
+<!-- Active Navigation -->
+<div onclick="window.location.href='apar-review.html'" class="bg-primary-container text-on-primary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 cursor-pointer transition-all active:scale-95 shadow-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pending_actions</span>
+<span class="text-label-md font-headline font-semibold">Pending Reviews</span>
+</div>
+<div class="text-primary-fixed-dim hover:bg-on-primary-fixed-variant/50 mx-2 my-1 rounded-lg flex items-center gap-3 px-4 py-3 cursor-pointer transition-all active:scale-95 group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">analytics</span>
+<span class="text-label-md font-headline">Reports</span>
+</div>
+<div onclick="window.location.href='directory.html'" class="text-primary-fixed-dim hover:bg-on-primary-fixed-variant/50 mx-2 my-1 rounded-lg flex items-center gap-3 px-4 py-3 cursor-pointer transition-all active:scale-95 group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">group</span>
+<span class="text-label-md font-headline">User Directory</span>
+</div>
+<div class="text-primary-fixed-dim hover:bg-on-primary-fixed-variant/50 mx-2 my-1 rounded-lg flex items-center gap-3 px-4 py-3 cursor-pointer transition-all active:scale-95 group mt-auto border-t border-on-primary-fixed-variant/20 pt-4">
+<span class="material-symbols-outlined group-hover:rotate-45 transition-transform">settings</span>
+<span class="text-label-md font-headline">Settings</span>
+</div>
+</nav>
+<div class="mt-6 px-4">
+<button class="w-full bg-secondary-container text-on-secondary-container rounded-xl py-3 px-4 flex items-center justify-center gap-2 font-bold shadow-lg hover:shadow-secondary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined">add</span>
+<span>New Report</span>
+</button>
+</div>
+</aside>
+<div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest flex justify-between items-center px-6 h-16 w-full z-40 shadow-sm border-b border-outline-variant sticky top-0">
+<div class="flex items-center gap-4">
+<span class="md:hidden material-symbols-outlined text-primary cursor-pointer">menu</span>
+<h1 class="text-lg font-headline font-bold text-primary">NIC Tripura APAR Management</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/30 focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-body" placeholder="Search staff or records..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<div onclick="window.location.href='notifications.html'" class="relative cursor-pointer hover:bg-surface-container-low p-2 rounded-full transition-colors group">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-white text-[10px] flex items-center justify-center rounded-full border-2 border-white">3</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-surface-container-low p-2 rounded-full transition-colors">help_outline</span>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant ml-2 cursor-pointer group">
+<div class="text-right hidden lg:block">
+<p class="text-sm font-bold text-primary leading-tight">Dr. Amit Roy</p>
+<p class="text-[10px] text-on-surface-variant font-label uppercase tracking-wider">Senior Reporting Officer</p>
+</div>
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold shadow-inner overflow-hidden border border-outline-variant/50">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a senior Indian government official in a light blue formal shirt, posing in a clean, brightly lit corporate office environment. The lighting is soft and flattering, emphasizing a dignified and trustworthy expression. High-end portrait photography style with a shallow depth of field, highlighting Dr. Amit Roy's professional persona against a minimalist, blurred background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRzEIk5bweqoJnI_HG7CJZoNmXmwFyTt9wJd3ker6ewrJ3kXbEwgc7yId9OxZ2KyLDnYwsbgkKIkS6MqQzNJ6YwmIFv9L9KMrlnnbv8-o1nPaBrOFN06KwPfSMBOZsn-Vql9kFx0ZwZmhioPr9C2EbEK6EyXCYIOZroxT3b8hKC6wem3fC8SWl_aRxEQhUD9ZKwOyiMF0O8OVkzGPuKExGIJkwwKQhAmDaiEeOBf2NBnw8Pydb5HW84z8Pcdqasobmi6Zi-AACkA5G"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto p-4 md:p-8 bg-surface">
+<!-- Header Section -->
+<div class="mb-8">
+<nav class="flex items-center gap-2 text-xs text-on-surface-variant mb-4">
+<span onclick="window.location.href='authority-dashboard.html'" class="hover:text-primary cursor-pointer">Dashboard</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span onclick="window.location.href='apar-review.html'" class="hover:text-primary cursor-pointer">Pending Reviews</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-medium">Rajesh Kumar</span>
+</nav>
+<h2 class="text-2xl md:text-3xl font-headline font-bold text-primary mb-2">Review &amp; Assess APAR - Rajesh Kumar</h2>
+<p class="text-on-surface-variant max-w-2xl leading-relaxed">Assess targets and achievements, assign official grading, and write evaluation remarks for the current assessment cycle.</p>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
+<!-- Left Column (Review) - 60% approx -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<!-- Employee Information -->
+<div class="glass-card rounded-lg p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">badge</span>
+                                Employee Information
+                            </h3>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded-full text-xs font-bold font-label">PERIOD: 2025-2026</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+<p class="text-[10px] font-label text-on-surface-variant uppercase tracking-wider mb-1">Employee Name</p>
+<p class="font-bold text-on-surface">Rajesh Kumar</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+<p class="text-[10px] font-label text-on-surface-variant uppercase tracking-wider mb-1">Designation</p>
+<p class="font-bold text-on-surface">Scientist B</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+<p class="text-[10px] font-label text-on-surface-variant uppercase tracking-wider mb-1">Department</p>
+<p class="font-bold text-on-surface">Software Development</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+<p class="text-[10px] font-label text-on-surface-variant uppercase tracking-wider mb-1">Reporting Officer</p>
+<p class="font-bold text-on-surface">Dr. Amit Roy</p>
+</div>
+</div>
+</div>
+<!-- Self-Appraisal Details -->
+<div class="glass-card rounded-lg p-6 shadow-sm">
+<h3 class="font-headline font-bold text-primary flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-xl">article</span>
+                            Self-Appraisal Details
+                        </h3>
+<div class="space-y-6">
+<div>
+<h4 class="text-sm font-bold text-primary mb-2 flex items-center gap-2">
+<span class="w-1.5 h-4 bg-secondary rounded-full"></span>
+                                    Duties / Targets
+                                </h4>
+<div class="bg-surface-bright p-4 rounded-lg border border-outline-variant/40 text-sm leading-relaxed text-on-surface-variant italic">
+                                    "Responsible for lead architecture of the State Data Center migration project. Target: Complete the migration of 45 government portals by end of Q3 with zero downtime. Mentoring 3 junior developers in DevOps practices."
+                                </div>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary mb-2 flex items-center gap-2">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+                                    Achievements
+                                </h4>
+<div class="bg-surface-bright p-4 rounded-lg border border-outline-variant/40 text-sm leading-relaxed text-on-surface-variant">
+                                    "Successfully migrated 48 portals (3 ahead of target) with an average improvement of 15% in page load speeds across all services. Implemented automated CI/CD pipelines which reduced manual deployment errors by 40%."
+                                </div>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary mb-2 flex items-center gap-2">
+<span class="w-1.5 h-4 bg-tertiary rounded-full"></span>
+                                    Shortfalls
+                                </h4>
+<div class="bg-surface-bright p-4 rounded-lg border border-outline-variant/40 text-sm leading-relaxed text-on-surface-variant italic">
+                                    "Security audit documentation for 5 portals was delayed by two weeks due to unforeseen hardware failure in the testing environment during the first week of November."
+                                </div>
+</div>
+</div>
+</div>
+<!-- Submitted Attachments -->
+<div class="glass-card rounded-lg p-6 shadow-sm">
+<h3 class="font-headline font-bold text-primary flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-xl">attach_file</span>
+                            Submitted Attachments
+                        </h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant/20 group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Project_Completion_Certificate.pdf</p>
+<p class="text-[10px] text-on-surface-variant">1.2 MB • Verified on 14 Jan 2026</p>
+</div>
+</div>
+<button class="p-2 hover:bg-white rounded-full transition-all text-primary">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant/20 group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">description</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Training_Record_Q3.docx</p>
+<p class="text-[10px] text-on-surface-variant">850 KB • Verified on 12 Jan 2026</p>
+</div>
+</div>
+<button class="p-2 hover:bg-white rounded-full transition-all text-primary">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (Assessment Form) - 40% approx -->
+<div class="lg:col-span-4">
+<div class="glass-card rounded-lg p-6 shadow-xl border-primary/10 sticky top-24">
+<h3 class="font-headline font-bold text-primary flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-xl">fact_check</span>
+                            Grading &amp; Evaluation Form
+                        </h3>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Assigned Grading</label>
+<div class="relative">
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-primary appearance-none cursor-pointer">
+<option disabled="" selected="" value="">Select grading...</option>
+<option value="A+">Outstanding (A+)</option>
+<option value="A">Very Good (A)</option>
+<option value="B+">Good (B+)</option>
+<option value="B">Satisfactory (B)</option>
+<option value="C">Below Benchmark (C)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+<p class="text-[10px] text-on-surface-variant mt-2 px-1">Note: Grade A+ requires detailed justification in remarks.</p>
+</div>
+<div class="flex items-start gap-3 p-3 bg-error-container/20 rounded-lg border border-error/10">
+<input class="mt-1 w-4 h-4 text-primary border-outline rounded focus:ring-primary" id="admin_review" type="checkbox"/>
+<label class="text-xs font-medium text-on-surface leading-tight" for="admin_review">
+                                    Flag this report for additional administrative review (requires justification)
+                                </label>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Reporting Officer's Evaluation Remarks</label>
+<textarea class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-primary resize-none placeholder:text-outline" placeholder="Enter detailed performance analysis, strengths, weaknesses, and potential for higher responsibilities..." rows="8"></textarea>
+<div class="flex justify-end mt-1">
+<span class="text-[10px] text-on-surface-variant">Min. 100 characters required</span>
+</div>
+</div>
+<div class="pt-4 space-y-3">
+<button onclick="alert('APAR evaluation successfully approved and digitally signed!'); window.location.href='authority-dashboard.html'" class="w-full bg-primary text-on-primary font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined">verified_user</span>
+                                    Approve &amp; Sign APAR
+                                </button>
+<div class="grid grid-cols-2 gap-3">
+<button onclick="alert('Resubmission request sent back to the employee.'); window.location.href='authority-dashboard.html'" class="border-2 border-tertiary text-tertiary font-bold py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-tertiary/5 transition-colors active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-sm">reply</span>
+                                        Resubmit
+                                    </button>
+<button onclick="alert('APAR successfully rejected.'); window.location.href='authority-dashboard.html'" class="border-2 border-error text-error font-bold py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-error/5 transition-colors active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-sm">cancel</span>
+                                        Reject
+                                    </button>
+</div>
+</div>
+</form>
+<div class="mt-8 pt-6 border-t border-outline-variant/30">
+<div class="flex items-center gap-4">
+<div class="p-2 bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Digital Signature Ready</p>
+<p class="text-[10px] text-on-surface-variant">Your e-Sign will be applied upon approval.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-8 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<img class="h-8 grayscale opacity-50 hover:grayscale-0 transition-all cursor-pointer" data-alt="The digital logo of the National Informatics Centre (NIC), presented with crisp professional graphics on a transparent background. The design is modern, utilizing shades of corporate blue and orange, reflecting high-tech governmental standards. The lighting is bright and uniform, suitable for a professional footer, showcasing the reliability and established status of the Indian technology institution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZsv5t4jxXTO39snlEo2JSO_NJ_BAtzeMuO2IiCzpv8EQRoqf-MTnNZollwJx7XfY-NX_OdpO6Es5QcIt1v31Hsq4xV25YRdozevBnAgIO7LMPjC-WkZm0a8dNalioKqo_Dyg9xck7_m9Fz0lcfQJaMHiVAwl8sqa7rPMzr7iS6aPcnvtQZbmfMJWeNpKP51tcu30bbVYnfA2QOZIrd71wfbS16gModc5VwNdGVEI9RiP7oOgnBSy8QTa3gnjC2L_blknQI9U9hDnw"/>
+<div class="h-8 w-px bg-outline-variant"></div>
+<p class="text-xs text-on-surface-variant font-label">© 2025 National Informatics Centre, Tripura State Unit. All Rights Reserved.</p>
+</div>
+<div class="flex gap-8 text-[11px] font-label text-on-surface-variant uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Use</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth reveal for cards
+            const cards = document.querySelectorAll('.glass-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+
+            // Form validation highlight (Simplified)
+            const textarea = document.querySelector('textarea');
+            textarea.addEventListener('focus', () => {
+                textarea.parentElement.querySelector('label').style.color = '#004485';
+            });
+            textarea.addEventListener('blur', () => {
+                textarea.parentElement.querySelector('label').style.color = '';
+            });
+        });
+    </script>
+</body></html>

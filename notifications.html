@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notification Center | NIC Tripura APAR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "on-tertiary-container": "#ffcaad",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c2c6d3",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-primary": "#a8c8ff",
+                        "on-primary-fixed-variant": "#004689",
+                        "on-primary-fixed": "#001b3c",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-container": "#316bf3",
+                        "secondary-fixed": "#dbe1ff",
+                        "outline": "#727783",
+                        "error": "#ba1a1a",
+                        "secondary": "#0051d5",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "on-tertiary-fixed": "#321200",
+                        "surface-container-high": "#e6e8ea",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d8dadc",
+                        "inverse-surface": "#2d3133",
+                        "surface-tint": "#115eaf",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-fixed": "#d5e3ff",
+                        "tertiary-fixed-dim": "#ffb68d",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary-container": "#c0d6ff",
+                        "on-error-container": "#93000a",
+                        "background": "#f7f9fb",
+                        "tertiary-fixed": "#ffdbc9",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#00174b",
+                        "primary-container": "#0b5cad",
+                        "surface-container": "#eceef0",
+                        "on-surface": "#191c1e",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error": "#ffffff",
+                        "primary": "#004485",
+                        "on-surface-variant": "#424751",
+                        "tertiary-container": "#974400",
+                        "on-background": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#a8c8ff",
+                        "tertiary": "#723200"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "display": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Public Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .font-label { font-family: 'Public Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+        }
+        .sidebar-active {
+            background-color: #316bf3 !important;
+            color: #fefcff !important;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-surface-container-lowest shadow-sm border-b border-outline-variant">
+<div onclick="window.location.href='employee-dashboard.html'" class="flex items-center gap-4 cursor-pointer">
+<img alt="NIC Tripura Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLv6L26kzLfmuTUepzU1hsFpIBYspxmFQpraw-4cS98V6UBOIuNPNJXFBRXX0pauudj75F_RJsDiINQeSp_pBGuYYE93KvL9j6jSl82MRw3Px9xyXjfv0i5JcYYcO6QPU_cBuIwNKve-_HL8I3_4QvJIKNbypF2y6-K4-K-tNflEZvLUfu3eeszKe2kl9CelI6LvoxjH4naQjklnL972V4hE5QEZOXvYsp1R9akDRY3tZEQJHfbhG3hVvJk"/>
+<h1 class="font-headline text-headline-sm font-bold text-primary tracking-tight">NIC Tripura APAR</h1>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<div class="relative cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">notifications</span>
+<span class="absolute -top-1 -right-1 bg-error text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full">3</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">help</span>
+<div class="flex items-center gap-3 border-l border-outline-variant pl-6 ml-2">
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">Rajesh Kumar</p>
+<p class="text-xs text-on-surface-variant">Scientist B</p>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="A professional headshot of a middle-aged South Asian male government scientist in a formal white shirt, clean-shaven, with a friendly yet professional expression. High-quality corporate photography lighting, soft office background, minimalist professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfd3s4gQVpkZP1sVB1Oo9NCV7qGnFPAjb9D6FeimYWH0P7_Q4JKnhRfMhsNM4-PNwizCeHDOhDY0NOXVhZPjsqGzIjuoSv4THi5G0jeh9Tj9l633mtIY7hIoKc6k_bMM-Ci28omML0oJIHMC8jSX6TsB_hvp7DwmIc0YP0m13RsFEWgFABhF87mb6O8X5UZ2GDBRrfVHiJlusHc2jQ9XRlByy8V7UhcNaJO1BpaISLjhKiiw-tzdYh9BKF80n_W__CiPpd-TjHTroY"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex pt-16 min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 flex flex-col pt-4 bg-primary shadow-xl z-40">
+<div class="px-6 mb-8">
+<h2 class="text-lg font-black text-on-primary leading-tight">APAR Management</h2>
+<p class="text-xs text-secondary-fixed opacity-70">NIC Tripura</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-secondary-fixed opacity-80 hover:bg-primary-container hover:text-on-primary-container hover:opacity-100 mx-2 px-4 py-3 flex items-center gap-3 transition-all rounded-lg" href="employee-dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label text-label-lg font-medium">Dashboard</span>
+</a>
+<a class="text-secondary-fixed opacity-80 hover:bg-primary-container hover:text-on-primary-container hover:opacity-100 mx-2 px-4 py-3 flex items-center gap-3 transition-all rounded-lg" href="apar-submit.html">
+<span class="material-symbols-outlined">edit_document</span>
+<span class="font-label text-label-lg font-medium">Submit APAR</span>
+</a>
+<a class="bg-secondary-container text-on-secondary-container rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 font-medium shadow-md" href="notifications.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-label text-label-lg">Notifications</span>
+</a>
+<a class="text-secondary-fixed opacity-80 hover:bg-primary-container hover:text-on-primary-container hover:opacity-100 mx-2 px-4 py-3 flex items-center gap-3 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label text-label-lg font-medium">History</span>
+</a>
+<div class="border-t border-white/10 my-4 mx-4"></div>
+<a class="text-secondary-fixed opacity-80 hover:bg-primary-container hover:text-on-primary-container hover:opacity-100 mx-2 px-4 py-3 flex items-center gap-3 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-label text-label-lg font-medium">Profile</span>
+</a>
+<a class="text-secondary-fixed opacity-80 hover:bg-primary-container hover:text-on-primary-container hover:opacity-100 mx-2 px-4 py-3 flex items-center gap-3 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label text-label-lg font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-primary-container/20 p-4 rounded-xl border border-white/5">
+<p class="text-xs text-on-primary-container font-medium mb-2">System Status</p>
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-green-400 animate-pulse"></div>
+<p class="text-[10px] text-secondary-fixed">All systems operational</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 flex flex-col">
+<div class="p-8 max-w-6xl mx-auto w-full flex-1">
+<!-- Header -->
+<div class="mb-8 flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-black text-on-surface tracking-tight mb-2">Notification Center</h2>
+<p class="text-on-surface-variant max-w-2xl">Track your alerts, appraisal deadlines, and announcements from administrative officers.</p>
+</div>
+<button onclick="alert('All notifications marked as read.'); document.querySelectorAll('.bg-error, .bg-secondary').forEach(dot => dot.style.display = 'none'); document.querySelectorAll('.ring-4').forEach(ring => ring.style.display = 'none');" class="flex items-center gap-2 px-4 py-2 text-primary hover:bg-primary-fixed rounded-lg transition-colors font-medium">
+<span class="material-symbols-outlined text-lg">done_all</span>
+<span>Mark All as Read</span>
+</button>
+</div>
+<!-- Toolbar & Tabs -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-2 mb-6 flex flex-wrap items-center justify-between gap-4">
+<div class="flex gap-1">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-sm font-bold transition-all">All Alerts (8)</button>
+<button class="px-4 py-2 hover:bg-surface-container text-on-surface-variant rounded-lg text-sm font-medium transition-all">Reminders (3)</button>
+<button class="px-4 py-2 hover:bg-surface-container text-on-surface-variant rounded-lg text-sm font-medium transition-all">Submissions (4)</button>
+<button class="px-4 py-2 hover:bg-surface-container text-on-surface-variant rounded-lg text-sm font-medium transition-all">System Announcements (1)</button>
+</div>
+<div class="relative min-w-[300px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-lg border-none focus:ring-2 focus:ring-primary text-sm" placeholder="Search notifications..." type="text"/>
+</div>
+</div>
+<!-- Notification List (Vertical Stack) -->
+<div class="space-y-4 mb-12">
+<!-- 1. High Priority (Unread) -->
+<div class="bg-surface-container-lowest border-l-4 border-error shadow-sm hover:shadow-md transition-all rounded-lg p-5 flex gap-4 group">
+<div class="flex-shrink-0">
+<div class="h-12 w-12 bg-error-container text-error rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">APAR Submission Deadline Extended to July 31, 2026</h3>
+<span class="text-[10px] font-black uppercase tracking-wider text-error bg-error-container px-2 py-0.5 rounded">Urgent</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-3">All officers under the Science &amp; Technology department are notified that the deadline for 2025-26 APAR submission has been extended. Please ensure completion before the new cutoff.</p>
+<div class="flex items-center gap-4 text-xs text-outline font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Admin</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 2 hours ago</span>
+</div>
+</div>
+<div class="flex items-center">
+<div class="h-3 w-3 bg-error rounded-full ring-4 ring-error-container/30"></div>
+</div>
+</div>
+<!-- 2. Normal Priority (Unread) -->
+<div class="bg-surface-container-lowest border-l-4 border-secondary shadow-sm hover:shadow-md transition-all rounded-lg p-5 flex gap-4">
+<div class="flex-shrink-0">
+<div class="h-12 w-12 bg-secondary-fixed text-secondary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">description</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-surface">Reporting Officer Assigned</h3>
+<span class="text-[10px] font-black uppercase tracking-wider text-secondary bg-secondary-fixed px-2 py-0.5 rounded">Action Required</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-3">Shri Amitabha Das (Senior Scientist) has been assigned as your Reporting Officer for the current appraisal cycle. Please verify your hierarchy details.</p>
+<div class="flex items-center gap-4 text-xs text-outline font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">robot</span> System</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 1 day ago</span>
+</div>
+</div>
+<div class="flex items-center">
+<div class="h-3 w-3 bg-secondary rounded-full ring-4 ring-secondary-fixed/30"></div>
+</div>
+</div>
+<!-- 3. Normal Priority (Read) -->
+<div class="bg-surface-container-low opacity-80 hover:opacity-100 transition-all rounded-lg p-5 flex gap-4 border border-outline-variant/30">
+<div class="flex-shrink-0">
+<div class="h-12 w-12 bg-surface-container-high text-on-surface-variant rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">check_circle</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-surface">APAR Guidelines PDF Uploaded</h3>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">The revised guidelines for filing ACR/APAR for the financial year 2024-25 are now available in the portal documentation section.</p>
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-4 text-xs text-outline font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Admin</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 3 days ago</span>
+</div>
+<button class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest border border-outline-variant text-primary text-xs font-bold rounded-md hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                                    Download PDF
+                                </button>
+</div>
+</div>
+</div>
+<!-- 4. Low Priority (Read) -->
+<div class="bg-surface-container-low opacity-70 hover:opacity-100 transition-all rounded-lg p-5 flex gap-4 border border-outline-variant/30">
+<div class="flex-shrink-0">
+<div class="h-12 w-12 bg-surface-container-high text-on-surface-variant rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">info</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-on-surface mb-1">Welcome to the ACR/APAR Management System</h3>
+<p class="text-sm text-on-surface-variant mb-3">Your account has been successfully synchronized with the central HR database of NIC Tripura. Welcome aboard.</p>
+<div class="flex items-center gap-4 text-xs text-outline font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">robot</span> System</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 1 week ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More (Contextual extra) -->
+<div class="flex justify-center mb-12">
+<button class="px-8 py-3 bg-surface-container-high text-on-surface-variant font-bold rounded-full hover:bg-outline-variant transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">expand_more</span>
+                        Load Previous Notifications
+                    </button>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full flex justify-between items-center px-8 py-6 mt-auto border-t border-outline-variant bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 opacity-50 grayscale hover:grayscale-0 transition-all">
+<img alt="NIC Logo Small" class="h-full w-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLv6L26kzLfmuTUepzU1hsFpIBYspxmFQpraw-4cS98V6UBOIuNPNJXFBRXX0pauudj75F_RJsDiINQeSp_pBGuYYE93KvL9j6jSl82MRw3Px9xyXjfv0i5JcYYcO6QPU_cBuIwNKve-_HL8I3_4QvJIKNbypF2y6-K4-K-tNflEZvLUfu3eeszKe2kl9CelI6LvoxjH4naQjklnL972V4hE5QEZOXvYsp1R9akDRY3tZEQJHfbhG3hVvJk"/>
+</div>
+<p class="font-body text-body-small text-on-surface-variant font-medium">
+                        © 2024 National Informatics Centre, Tripura. All Rights Reserved.
+                    </p>
+</div>
+<div class="flex gap-6">
+<a class="font-body text-body-small text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body text-body-small text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="font-body text-body-small text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</footer>
+</main>
+</div>
+<script>
+        // Micro-interactions for notification items
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.classList.add('scale-[1.005]');
+            });
+            item.addEventListener('mouseleave', () => {
+                item.classList.remove('scale-[1.005]');
+            });
+        });
+    </script>
+</body></html>
