@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard - NIC Tripura APAR System</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "primary": "#004485",
+                        "background": "#f7f9fb",
+                        "on-surface-variant": "#424751",
+                        "surface-container": "#eceef0",
+                        "tertiary-fixed-dim": "#ffb68d",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f7f9fb",
+                        "on-primary-fixed": "#001b3c",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1e",
+                        "tertiary": "#723200",
+                        "secondary": "#0051d5",
+                        "inverse-primary": "#a8c8ff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-container": "#ffcaad",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#0b5cad",
+                        "outline": "#727783",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-container": "#974400",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface": "#191c1e",
+                        "primary-fixed": "#d5e3ff",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "surface-tint": "#115eaf",
+                        "on-secondary-fixed": "#00174b",
+                        "on-tertiary-fixed": "#321200",
+                        "tertiary-fixed": "#ffdbc9",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#316bf3",
+                        "outline-variant": "#c2c6d3",
+                        "on-secondary-container": "#fefcff",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed-dim": "#a8c8ff",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#c0d6ff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-fixed-variant": "#004689"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "display": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Public Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col md:flex-row antialiased">
+<!-- SideNavBar (Hidden on Mobile, Flex on MD) -->
+<nav class="hidden md:flex flex-col bg-primary dark:bg-on-primary-fixed-variant shadow-xl fixed left-0 top-0 h-full w-64 z-50 pt-4 pb-6 transition-all duration-300">
+<div class="px-6 mb-8 flex flex-col items-start gap-4">
+<div class="flex items-center gap-3 w-full">
+<img alt="NIC Logo" class="h-10 w-10 object-contain bg-white rounded-full p-1 shrink-0 shadow-sm" src="https://lh3.googleusercontent.com/aida/AP1WRLv6L26kzLfmuTUepzU1hsFpIBYspxmFQpraw-4cS98V6UBOIuNPNJXFBRXX0pauudj75F_RJsDiINQeSp_pBGuYYE93KvL9j6jSl82MRw3Px9xyXjfv0i5JcYYcO6QPU_cBuIwNKve-_HL8I3_4QvJIKNbypF2y6-K4-K-tNflEZvLUfu3eeszKe2kl9CelI6LvoxjH4naQjklnL972V4hE5QEZOXvYsp1R9akDRY3tZEQJHfbhG3hVvJk"/>
+<div class="flex flex-col">
+<span class="text-lg font-black text-on-primary leading-tight font-headline tracking-tight">APAR Management</span>
+<span class="text-xs text-primary-fixed opacity-80 font-medium">NIC Tripura</span>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-1 overflow-y-auto px-2">
+<!-- Active Tab -->
+<a class="bg-secondary-container text-on-secondary-container rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 font-medium font-label text-label-lg transition-transform scale-95 hover:bg-primary-container hover:text-on-primary-container group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="text-secondary-fixed opacity-80 hover:opacity-100 mx-2 my-1 px-4 py-3 flex items-center gap-3 font-label text-label-lg hover:bg-primary-container hover:text-on-primary-container rounded-lg transition-all active:scale-90 group" href="#">
+<span class="material-symbols-outlined transition-colors group-hover:text-on-primary-container">edit_document</span>
+<span class="transition-colors group-hover:text-on-primary-container">Submit APAR</span>
+</a>
+<a class="text-secondary-fixed opacity-80 hover:opacity-100 mx-2 my-1 px-4 py-3 flex items-center gap-3 font-label text-label-lg hover:bg-primary-container hover:text-on-primary-container rounded-lg transition-all active:scale-90 group" href="#">
+<span class="material-symbols-outlined transition-colors group-hover:text-on-primary-container">history</span>
+<span class="transition-colors group-hover:text-on-primary-container">History</span>
+</a>
+<a class="text-secondary-fixed opacity-80 hover:opacity-100 mx-2 my-1 px-4 py-3 flex items-center gap-3 font-label text-label-lg hover:bg-primary-container hover:text-on-primary-container rounded-lg transition-all active:scale-90 group" href="#">
+<span class="material-symbols-outlined transition-colors group-hover:text-on-primary-container">account_circle</span>
+<span class="transition-colors group-hover:text-on-primary-container">Profile</span>
+</a>
+<a class="text-secondary-fixed opacity-80 hover:opacity-100 mx-2 my-1 px-4 py-3 flex items-center gap-3 font-label text-label-lg hover:bg-primary-container hover:text-on-primary-container rounded-lg transition-all active:scale-90 group" href="#">
+<span class="material-symbols-outlined transition-colors group-hover:text-on-primary-container">settings</span>
+<span class="transition-colors group-hover:text-on-primary-container">Settings</span>
+</a>
+</div>
+<div class="px-6 mt-auto">
+<div class="pt-4 border-t border-white/20">
+<div class="flex items-center gap-3 text-secondary-fixed opacity-80">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-medium">Support</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-dim shadow-sm fixed top-0 left-0 md:left-64 right-0 z-40 h-16 flex justify-between items-center px-4 md:px-8 border-b border-outline-variant dark:border-outline">
+<div class="flex items-center gap-3 md:hidden">
+<img alt="NIC Logo" class="h-8 w-8 object-contain bg-white rounded-full p-0.5 shadow-sm" src="https://lh3.googleusercontent.com/aida/AP1WRLv6L26kzLfmuTUepzU1hsFpIBYspxmFQpraw-4cS98V6UBOIuNPNJXFBRXX0pauudj75F_RJsDiINQeSp_pBGuYYE93KvL9j6jSl82MRw3Px9xyXjfv0i5JcYYcO6QPU_cBuIwNKve-_HL8I3_4QvJIKNbypF2y6-K4-K-tNflEZvLUfu3eeszKe2kl9CelI6LvoxjH4naQjklnL972V4hE5QEZOXvYsp1R9akDRY3tZEQJHfbhG3hVvJk"/>
+<span class="text-lg font-bold text-primary dark:text-primary-fixed font-headline">NIC Tripura APAR</span>
+</div>
+<!-- Spacer for web -->
+<div class="hidden md:block flex-1">
+<h1 class="text-xl font-bold text-on-surface font-headline tracking-tight">APAR / ACR Management System</h1>
+</div>
+<div class="flex items-center gap-6">
+<!-- Actions -->
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="relative hover:bg-surface-container-high p-2 rounded-full transition-colors cursor-pointer active:opacity-80 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error rounded-full flex items-center justify-center text-[10px] font-bold border-2 border-surface-container-lowest shadow-sm">3</span>
+</button>
+<button class="hidden sm:block hover:bg-surface-container-high p-2 rounded-full transition-colors cursor-pointer active:opacity-80 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">help</span>
+</button>
+</div>
+<div class="w-px h-6 bg-outline-variant/50 hidden sm:block"></div>
+<!-- Profile -->
+<div class="flex items-center gap-3 hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 p-1.5 rounded-lg pr-3">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold font-headline shadow-sm ring-2 ring-transparent hover:ring-primary-container/30 transition-all">
+                        RK
+                    </div>
+<div class="hidden sm:flex flex-col text-sm">
+<span class="font-bold text-on-surface font-label leading-tight">Rajesh Kumar</span>
+<span class="text-xs text-on-surface-variant font-medium">Scientist B</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm hidden sm:block">expand_more</span>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 p-4 md:p-8 mt-16 pb-24 md:pb-8">
+<div class="max-w-7xl mx-auto space-y-6">
+<!-- Welcome Card (Glassmorphism/Gradient) -->
+<section class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-secondary p-8 text-on-primary shadow-lg border border-primary/20">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+<div class="absolute bottom-0 right-32 w-48 h-48 bg-secondary-container/20 rounded-full blur-2xl -mb-16 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="space-y-3">
+<h2 class="text-3xl font-extrabold font-headline tracking-tight text-white drop-shadow-sm">Welcome back, Rajesh Kumar</h2>
+<div class="flex flex-wrap items-center gap-3 text-sm font-medium text-primary-fixed">
+<span class="bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10 flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+                                    Designation: Scientist B
+                                </span>
+<span class="bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10 flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+                                    Software Development
+                                </span>
+<span class="bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10 flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    Tripura State Centre
+                                </span>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl flex items-center gap-4 shrink-0 shadow-sm">
+<div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">calendar_today</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-primary-fixed font-semibold uppercase tracking-wider">Current Date</span>
+<span class="text-lg font-bold text-white tracking-tight" id="current-date">July 25, 2026</span>
+<script>
+                                    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                                </script>
+</div>
+</div>
+</div>
+</section>
+<!-- Metrics Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-tertiary-fixed rounded-lg text-on-tertiary-fixed-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pending_actions</span>
+</div>
+<span class="text-xs font-semibold text-outline tracking-wider uppercase">Status</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-on-surface-variant mb-1">Current APAR Status</h3>
+<div class="inline-flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1.5 rounded-md font-bold text-sm shadow-sm border border-tertiary/20">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                                Pending Review
+                            </div>
+<p class="text-xs text-on-surface-variant mt-2 font-medium">(Reporting Authority)</p>
+</div>
+</div>
+<!-- Grade Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-fixed rounded-lg text-on-secondary-fixed-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<span class="text-xs font-semibold text-outline tracking-wider uppercase">Performance</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-on-surface-variant mb-1">Last Approved Grade</h3>
+<p class="text-2xl font-black text-on-surface font-headline tracking-tight text-secondary">Outstanding (A+)</p>
+<p class="text-xs text-on-surface-variant mt-1 font-semibold uppercase tracking-wide">FY 2024-25</p>
+</div>
+</div>
+<!-- Alerts Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-error-container rounded-lg text-on-error-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</div>
+<span class="text-xs font-semibold text-outline tracking-wider uppercase">Alerts</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-on-surface-variant mb-1">Notifications</h3>
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-black text-error font-headline">3</p>
+<p class="text-sm font-bold text-on-surface-variant">New Alerts</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Complex 2-Column Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column: Timeline -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 p-6 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold text-on-surface font-headline flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">timeline</span>
+                                APAR Activity Timeline (2025-26)
+                            </h3>
+<button class="text-sm font-semibold text-primary hover:underline flex items-center gap-1">
+                                View Full History <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="relative flex-1 pl-4 border-l-2 border-surface-variant ml-2 space-y-8 mt-2">
+<!-- Completed Step 1 -->
+<div class="relative">
+<div class="absolute -left-[27px] w-5 h-5 rounded-full bg-surface-container-lowest border-2 border-[#16a34a] flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-[#16a34a]"></span>
+</div>
+<div class="ml-4">
+<h4 class="text-base font-bold text-on-surface">Draft Saved</h4>
+<p class="text-sm text-on-surface-variant mt-0.5">You initiated the self-appraisal form and saved a draft.</p>
+<p class="text-xs font-medium text-outline mt-1 bg-surface py-0.5 px-2 rounded-sm inline-block">June 15, 2026 • 10:30 AM</p>
+</div>
+</div>
+<!-- Completed Step 2 -->
+<div class="relative">
+<div class="absolute -left-[27px] w-5 h-5 rounded-full bg-surface-container-lowest border-2 border-[#16a34a] flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-[#16a34a]"></span>
+</div>
+<div class="ml-4">
+<h4 class="text-base font-bold text-on-surface">Self-Appraisal Submitted</h4>
+<p class="text-sm text-on-surface-variant mt-0.5">Form successfully submitted to the designated Reporting Officer.</p>
+<p class="text-xs font-medium text-outline mt-1 bg-surface py-0.5 px-2 rounded-sm inline-block">June 20, 2026 • 02:15 PM</p>
+</div>
+</div>
+<!-- Active Step -->
+<div class="relative">
+<div class="absolute -left-[29px] w-6 h-6 rounded-full bg-tertiary-fixed border-[3px] border-surface-container-lowest flex items-center justify-center shadow-[0_0_0_2px_theme(colors.tertiary)] z-10">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<div class="ml-4 bg-tertiary-fixed/30 p-4 rounded-lg border border-tertiary/20 shadow-sm -mt-3">
+<h4 class="text-base font-bold text-on-surface text-tertiary">Under Review by Reporting Officer</h4>
+<p class="text-sm text-on-surface-variant mt-1 font-medium">Dr. Anil Sharma is currently reviewing your self-appraisal.</p>
+<p class="text-xs font-semibold text-tertiary mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Expected completion: July 10, 2026
+                                    </p>
+</div>
+</div>
+<!-- Future Step 1 -->
+<div class="relative">
+<div class="absolute -left-[27px] w-5 h-5 rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center">
+</div>
+<div class="ml-4 opacity-50">
+<h4 class="text-base font-bold text-on-surface">Review by Reviewing Authority</h4>
+<p class="text-sm text-on-surface-variant mt-0.5">Pending completion of Reporting Officer review.</p>
+</div>
+</div>
+<!-- Future Step 2 -->
+<div class="relative">
+<div class="absolute -left-[27px] w-5 h-5 rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center">
+</div>
+<div class="ml-4 opacity-50">
+<h4 class="text-base font-bold text-on-surface">Final Acceptance</h4>
+<p class="text-sm text-on-surface-variant mt-0.5">Pending review by Accepting Authority.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Actions & Notifications -->
+<div class="lg:col-span-1 space-y-6 flex flex-col">
+<!-- Quick Actions -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 p-6">
+<h3 class="text-lg font-bold text-on-surface font-headline mb-4 border-b border-outline-variant/20 pb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span> Quick Actions
+                            </h3>
+<div class="space-y-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-on-primary font-bold py-3 px-4 rounded-lg shadow-sm transition-all hover:shadow-md flex items-center justify-center gap-2 group active:scale-[0.98]">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform">edit_document</span>
+                                    Fill APAR Form
+                                </button>
+<button class="w-full bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold py-2.5 px-4 rounded-lg border border-outline-variant/50 transition-colors flex items-center justify-between group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">history</span>
+                                        View Previous Reports
+                                    </div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="w-full bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold py-2.5 px-4 rounded-lg border border-outline-variant/50 transition-colors flex items-center justify-between group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">manage_accounts</span>
+                                        Update Profile Details
+                                    </div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Notifications Preview -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 p-6 flex-1">
+<div class="flex justify-between items-center mb-4 border-b border-outline-variant/20 pb-3">
+<h3 class="text-lg font-bold text-on-surface font-headline flex items-center gap-2">
+<span class="material-symbols-outlined text-error">notifications</span> Recent Alerts
+                                </h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="p-1.5 bg-error-container rounded-full text-on-error-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-on-surface leading-tight">Submission deadline extended to July 31</p>
+<p class="text-xs text-on-surface-variant mt-1">Admin • 2 hours ago</p>
+</div>
+</li>
+<li class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="p-1.5 bg-primary-container rounded-full text-on-primary-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">person_check</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-on-surface leading-tight">Reporting Officer assigned</p>
+<p class="text-xs text-on-surface-variant mt-1">System • 1 day ago</p>
+</div>
+</li>
+<li class="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="p-1.5 bg-surface-variant rounded-full text-on-surface-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-on-surface leading-tight">APAR Guidelines PDF uploaded</p>
+<p class="text-xs text-on-surface-variant mt-1">Admin • 3 days ago</p>
+</div>
+</li>
+</ul>
+<button class="w-full text-center text-sm font-bold text-primary mt-4 py-2 hover:bg-surface-container-low rounded-lg transition-colors">
+                                View All Notifications
+                            </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant w-full flex justify-between items-center px-8 py-4 mt-auto z-10 relative">
+<div class="text-on-surface-variant font-body text-body-small text-xs font-medium text-center w-full md:text-left md:w-auto">
+<span class="hidden md:inline">Designed &amp; Developed by National Informatics Centre, Tripura State Centre. </span>
+                © 2026. All Rights Reserved.
+            </div>
+<div class="hidden md:flex items-center gap-6 text-on-surface-variant font-body text-body-small text-sm font-medium">
+<a class="hover:text-primary transition-colors underline decoration-outline-variant/50 hover:decoration-primary underline-offset-4" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors underline decoration-outline-variant/50 hover:decoration-primary underline-offset-4" href="#">Contact Us</a>
+<a class="hover:text-primary transition-colors underline decoration-outline-variant/50 hover:decoration-primary underline-offset-4" href="#">Terms of Service</a>
+</div>
+</footer>
+</div>
+<!-- BottomNavBar for Mobile (Visible only on small screens) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest shadow-[0_-2px_10px_rgba(0,0,0,0.05)] border-t border-outline-variant z-50 flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center gap-1 text-primary group w-1/4" href="#">
+<div class="bg-primary-container px-4 py-1 rounded-full group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+</div>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary group w-1/4" href="#">
+<div class="px-4 py-1 rounded-full group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined">edit_document</span>
+</div>
+<span class="text-[10px] font-medium">Submit</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary group w-1/4" href="#">
+<div class="px-4 py-1 rounded-full group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-[10px] font-medium">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary group w-1/4" href="#">
+<div class="px-4 py-1 rounded-full group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<style>
+        @supports (padding-bottom: env(safe-area-inset-bottom)) {
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom);
+                height: calc(4rem + env(safe-area-inset-bottom));
+            }
+        }
+    </style>
+</body></html>

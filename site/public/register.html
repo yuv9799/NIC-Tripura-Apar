@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Employee Registration - NIC Tripura APAR/ACR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#0051d5",
+                        "on-secondary-container": "#fefcff",
+                        "outline": "#727783",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-fixed": "#ffdbc9",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-container": "#c0d6ff",
+                        "surface-container": "#eceef0",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "tertiary-container": "#974400",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary": "#004485",
+                        "outline-variant": "#c2c6d3",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#a8c8ff",
+                        "on-surface": "#191c1e",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed": "#321200",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#424751",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#723200",
+                        "on-primary-fixed": "#001b3c",
+                        "background": "#f7f9fb",
+                        "surface-tint": "#115eaf",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#a8c8ff",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-fixed-variant": "#004689",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "primary-container": "#0b5cad",
+                        "on-secondary-fixed": "#00174b",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-container": "#316bf3",
+                        "on-tertiary-container": "#ffcaad",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb68d",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "display": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Public Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-label { font-family: 'Public Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col pt-[72px]">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-3 bg-surface border-b border-outline-variant shadow-sm transition-colors">
+<div class="flex items-center gap-3">
+<img alt="NIC Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLv6L26kzLfmuTUepzU1hsFpIBYspxmFQpraw-4cS98V6UBOIuNPNJXFBRXX0pauudj75F_RJsDiINQeSp_pBGuYYE93KvL9j6jSl82MRw3Px9xyXjfv0i5JcYYcO6QPU_cBuIwNKve-_HL8I3_4QvJIKNbypF2y6-K4-K-tNflEZvLUfu3eeszKe2kl9CelI6LvoxjH4naQjklnL972V4hE5QEZOXvYsp1R9akDRY3tZEQJHfbhG3hVvJk"/>
+<span class="text-xl font-bold tracking-tight text-primary font-headline">NIC Tripura APAR/ACR</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-full flex items-center justify-center active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_balance</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-full flex items-center justify-center active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-full flex items-center justify-center active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">help</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-5xl mx-auto px-4 py-12 flex items-center justify-center">
+<div class="bg-surface-container-lowest rounded-xl shadow-md border border-surface-variant w-full overflow-hidden">
+<!-- Header Area -->
+<div class="bg-primary text-on-primary py-8 px-8 text-center flex flex-col items-center">
+<img alt="NIC Logo" class="h-16 w-16 object-contain mb-4 bg-white rounded-full p-1" src="https://lh3.googleusercontent.com/aida/AP1WRLv6L26kzLfmuTUepzU1hsFpIBYspxmFQpraw-4cS98V6UBOIuNPNJXFBRXX0pauudj75F_RJsDiINQeSp_pBGuYYE93KvL9j6jSl82MRw3Px9xyXjfv0i5JcYYcO6QPU_cBuIwNKve-_HL8I3_4QvJIKNbypF2y6-K4-K-tNflEZvLUfu3eeszKe2kl9CelI6LvoxjH4naQjklnL972V4hE5QEZOXvYsp1R9akDRY3tZEQJHfbhG3hVvJk"/>
+<h1 class="font-headline text-3xl font-bold mb-2">Employee Registration Portal</h1>
+<p class="text-primary-fixed text-sm max-w-xl mx-auto">Enter your official credentials and details to set up your APAR account.</p>
+</div>
+<!-- Form Area -->
+<form class="p-8">
+<!-- Section: Personal Info -->
+<div class="mb-8">
+<h2 class="text-lg font-semibold text-primary mb-4 border-b border-surface-variant pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+                        Personal Details
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Employee ID -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Employee ID <span class="text-error">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">badge</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="e.g. TR-EMP-1234" type="text"/>
+</div>
+</div>
+<!-- Spacer for Grid alignment if needed, but we'll pack fields tightly -->
+<div class="hidden md:block"></div>
+<!-- First Name -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">First Name <span class="text-error">*</span></label>
+<input class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="First Name" type="text"/>
+</div>
+<!-- Middle Name -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Middle Name <span class="text-on-surface-variant font-normal text-xs">(Optional)</span></label>
+<input class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="Middle Name" type="text"/>
+</div>
+<!-- Last Name -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Last Name <span class="text-error">*</span></label>
+<input class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="Last Name" type="text"/>
+</div>
+<!-- Gender -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Gender <span class="text-error">*</span></label>
+<select class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm">
+<option disabled="" selected="" value="">Select Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+</div>
+<!-- DOB -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Date of Birth <span class="text-error">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">calendar_month</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" type="date"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Contact & Official Details -->
+<div class="mb-8">
+<h2 class="text-lg font-semibold text-primary mb-4 border-b border-surface-variant pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">work</span>
+                        Contact &amp; Official Details
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Mobile -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Mobile Number <span class="text-error">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">phone_iphone</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="+91" type="tel"/>
+</div>
+</div>
+<!-- Email -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Official Email Address <span class="text-error">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">mail</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="name@tripura.gov.in" type="email"/>
+</div>
+</div>
+<!-- Designation -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Current Designation <span class="text-error">*</span></label>
+<input class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="e.g. Under Secretary" type="text"/>
+</div>
+<!-- Joining Date -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Date of Joining <span class="text-error">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">event_available</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" type="date"/>
+</div>
+</div>
+<!-- Organization (Pre-filled) -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Organization</label>
+<input class="block w-full px-3 py-2 border border-surface-variant rounded-lg bg-surface-container text-on-surface-variant cursor-not-allowed sm:text-sm font-medium" readonly="" type="text" value="Government of Tripura"/>
+</div>
+<!-- Department -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Department <span class="text-error">*</span></label>
+<select class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm">
+<option disabled="" selected="" value="">Select Department</option>
+<option value="finance">Finance Department</option>
+<option value="home">Home Department</option>
+<option value="health">Health &amp; Family Welfare</option>
+<option value="education">Education Department</option>
+</select>
+</div>
+<!-- Office -->
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-on-surface mb-1">Office / Location <span class="text-error">*</span></label>
+<input class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="e.g. Civil Secretariat, Agartala" type="text"/>
+</div>
+</div>
+</div>
+<!-- Section: Security -->
+<div class="mb-8">
+<h2 class="text-lg font-semibold text-primary mb-4 border-b border-surface-variant pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">lock</span>
+                        Security
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Password -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Password <span class="text-error">*</span></label>
+<input class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="••••••••" type="password"/>
+<p class="text-xs text-on-surface-variant mt-1">Must be at least 8 characters.</p>
+</div>
+<!-- Confirm Password -->
+<div>
+<label class="block text-sm font-medium text-on-surface mb-1">Confirm Password <span class="text-error">*</span></label>
+<input class="block w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface-bright text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="mt-8 border-t border-surface-variant pt-6">
+<div class="flex items-start mb-6">
+<div class="flex items-center h-5">
+<input class="w-4 h-4 text-primary bg-surface-bright border-outline-variant rounded focus:ring-primary" id="declaration" type="checkbox"/>
+</div>
+<div class="ml-3 text-sm">
+<label class="font-medium text-on-surface" for="declaration">I declare that all the information provided is correct to the best of my knowledge.</label>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<a class="text-primary hover:text-primary-fixed-variant font-medium text-sm flex items-center gap-1 transition-colors" href="login.html">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                            Back to Login
+                        </a>
+<button onclick="alert('Registration request submitted! Please check your email to activate your account.'); window.location.href='login.html'" class="w-full sm:w-auto bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-medium py-2.5 px-6 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person_add</span>
+                            Register Account
+                        </button>
+</div>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-6 px-4 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 bg-surface-container-lowest border-t border-outline-variant mt-auto">
+<div class="font-label font-bold text-on-surface text-center md:text-left">
+            © 2024 National Informatics Centre (NIC), Government of Tripura. All Rights Reserved.
+        </div>
+<div class="flex flex-wrap justify-center gap-4 font-body text-label-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Help Desk</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Contact Us</a>
+</div>
+</footer>
+</body></html>

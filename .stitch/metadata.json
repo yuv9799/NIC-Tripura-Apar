@@ -1,0 +1,89 @@
+{
+  "name": "projects/14307320087204588774",
+  "projectId": "14307320087204588774",
+  "title": "NIC Tripura APAR / ACR Management System",
+  "visibility": "PRIVATE",
+  "createTime": "2026-07-01T05:02:55.989883Z",
+  "updateTime": "2026-07-01T05:15:57.000000Z",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#0B5CAD",
+    "overridePrimaryColor": "#0B5CAD",
+    "overrideSecondaryColor": "#2563EB",
+    "overrideNeutralColor": "#F8FAFC"
+  },
+  "screens": {
+    "login": {
+      "id": "c66e5dabdf044c36a4594be8e362cd17",
+      "sourceScreen": "projects/14307320087204588774/screens/c66e5dabdf044c36a4594be8e362cd17",
+      "x": 0,
+      "y": 0,
+      "width": 2560,
+      "height": 2048
+    },
+    "register": {
+      "id": "7a333203b7f941ef9b3b4aa33a09d799",
+      "sourceScreen": "projects/14307320087204588774/screens/7a333203b7f941ef9b3b4aa33a09d799",
+      "x": 2600,
+      "y": 0,
+      "width": 2560,
+      "height": 3210
+    },
+    "employee-dashboard": {
+      "id": "2d3828183f464a9d909de7e5736a1605",
+      "sourceScreen": "projects/14307320087204588774/screens/2d3828183f464a9d909de7e5736a1605",
+      "x": 5200,
+      "y": 0,
+      "width": 2560,
+      "height": 2582
+    },
+    "authority-dashboard": {
+      "id": "4abe685d59a9439ba4896cf3434612b8",
+      "sourceScreen": "projects/14307320087204588774/screens/4abe685d59a9439ba4896cf3434612b8",
+      "x": 7800,
+      "y": 0,
+      "width": 2560,
+      "height": 2048
+    },
+    "directory": {
+      "id": "043d568fc5bb4dba894ae15717af568d",
+      "sourceScreen": "projects/14307320087204588774/screens/043d568fc5bb4dba894ae15717af568d",
+      "x": 10400,
+      "y": 0,
+      "width": 2560,
+      "height": 2048
+    },
+    "apar-submit": {
+      "id": "86c072d730e14c778711f408a8fa88a1",
+      "sourceScreen": "projects/14307320087204588774/screens/86c072d730e14c778711f408a8fa88a1",
+      "x": 3883,
+      "y": 680,
+      "width": 2560,
+      "height": 3184
+    },
+    "apar-review": {
+      "id": "b638054e405b4329985ee93eebb38140",
+      "sourceScreen": "projects/14307320087204588774/screens/b638054e405b4329985ee93eebb38140",
+      "x": 5183,
+      "y": 680,
+      "width": 2560,
+      "height": 3034
+    },
+    "notifications": {
+      "id": "ee4b4be1020840108791a4c816b39b89",
+      "sourceScreen": "projects/14307320087204588774/screens/ee4b4be1020840108791a4c816b39b89",
+      "x": 6483,
+      "y": 680,
+      "width": 2560,
+      "height": 2242
+    }
+  },
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}
